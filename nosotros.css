@@ -1,0 +1,260 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+   
+}
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #282c34;
+    padding: 1rem;
+}
+header a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#logo {
+    width: 50px;
+    height: 50px;
+}
+#logo img
+{
+    width: 70px;
+}
+/* Contenido */
+#inicio {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-top: 5px solid #ccc;
+    border-bottom: 5px solid #ccc;
+    position: relative;
+}
+#inicio .frase {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 600px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    font-style: italic;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+#inicio .estrellas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(W/imagenes/space-gif-space.gif) repeat;
+
+}
+@keyframes animacion-estrellas {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+#nosotros {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+#nosotros img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 2rem;
+
+}
+
+#nosotros .descripcion {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    font-size: 2.0rem;
+    margin-bottom: 1rem;
+  }
+  .estrellas {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: -1;
+}
+
+.estrellas {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: url("https://1.bp.blogspot.com/-evfaoADx-7k/U1GVnM5xraI/AAAAAAACFD4/jGPxillXppA/s1600/ESTRELLAS+%252838%2529.gif");
+  background-size: contain;
+  animation: subir 2s ease-in-out infinite;
+}
+
+.estrellas:nth-of-type(1) {
+  animation-delay: 0s;
+  left: 10%;
+  bottom: -20%;
+}
+
+.estrellas:nth-of-type(2) {
+  animation-delay: 0.2s;
+  left: 30%;
+  bottom: -30%;
+}
+
+.estrellas:nth-of-type(3) {
+  animation-delay: 0.4s;
+  left: 50%;
+  bottom: -40%;
+}
+
+.estrellas:nth-of-type(4) {
+  animation-delay: 0.6s;
+  left: 70%;
+  bottom: -30%;
+}
+
+.sestrellas:nth-of-type(5) {
+  animation-delay: 0.8s;
+  left: 90%;
+  bottom: -20%;
+}
+
+@keyframes subir {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -150%);
+  }
+  100% {
+    transform: translate(0, -300%);
+  }
+}
+
+  
+  .mision-vision {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .mision,
+  .vision {
+    width: 45%;
+    margin: auto;
+  }
+  
+  .mision h2,
+  .vision h2 {
+    font-weight: bold;
+  }
+  
+  .mision p,
+  .vision p {
+    margin-top: 10px;
+  }
+#contacto {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("astronomia.jpg") no-repeat center center fixed;
+    background-size: cover;
+    border-top: 5px solid #ccc;
+    border-bottom: 5px solid #ccc;
+    position: relative;
+}
+#contacto .redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+#contacto .redes img {
+    width: 40px;
+    height: 40px;
+    margin: 0 1rem;
+}
+#productos {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-top: 5px solid #ccc;
+    border-bottom: 5px solid #ccc;
+    position: relative;
+    padding: 2rem 0;
+}
+#productos .categoria {
+    margin: 2rem;
+    padding: 1rem;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+}
+#productos .categoria:hover .estrellas {
+    animation: animacion-estrellas 10s linear infinite reverse;
+}
+#productos .titulo {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+/* Media queries */
+@media screen and (min-width: 768px) {
+   /* Estilos para pantallas más grandes */
+    header {
+        padding: 1rem 2rem;
+    }
+    #inicio .frase {
+        font-size: 2rem;
+    }
+    #nosotros img {
+        margin-right: 2rem;
+        margin-bottom: 0;
+    }
+    #nosotros .descripcion {
+        text-align: left;
+    }
+    #contacto {
+        height: 70vh;
+    }
+    #productos {
+        height: auto;
+        padding: 4rem 0;
+    }
+    #productos .categoria {
+        width: 30%;
+        margin: 2%;
+        height: 400px;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Phoenix Store</title>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <a href="#" id="logo"><img src="imagenes/IMG-20230524-WA0001.png" alt="Logo"></a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="productos.html">Productos</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="login.html">Login</a>
+        </nav>
+        <button>Buscar</button>
+    </header>
+    
+    <!-- Sección de iniciar sesión -->
+    <section class="login-section">
+        <h2>Iniciar sesión</h2>
+        <form>
+            <label for="email">Correo electrónico:</label>
+            <input type="text" id="email" name="email" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Iniciar sesión">
+        </form>
+    </section>
+    
+    <!-- Sección de registro -->
+    <section class="register-section">
+        <h2>Registrarse</h2>
+        <form>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="last-name">Apellidos:</label>
+            <input type="text" id="last-name" name="last-name" required>
+            <label for="email">Correo electrónico:</label>
+            <input type="text" id="email" name="email" required>
+            <label for="create-password">Crear contraseña:</label>
+            <input type="password" id="create-password" name="create-password" required>
+            <input type="submit" value="Registrarse">
+        </form>
+    </section>
+    
+</body>
+</html>
